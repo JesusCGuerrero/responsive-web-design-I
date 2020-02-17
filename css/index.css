@@ -1,3 +1,458 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    max-width: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* Your code starts here! */
+
+/* Home Page */
+
+body {
+	margin: 30px 20%;
+}
+
+p {
+	font-family: 'Aldrich', sans-serif;
+	line-height: 1.3;
+}
+
+h3 {
+	font-size: 23px;
+}
+
+/* Nav Bar */
+nav {
+	background-color: rgb(230, 230, 230);
+	padding: 20px;
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	z-index: 99;
+	position: fixed;
+    top: 0;
+    text-align: center;
+}
+nav a {
+	color: grey;
+	width: 12%;
+    text-decoration: none;
+    transition-duration: .2s;
+    font-size: 90%;
+}
+nav a:hover {
+	color: black;
+	font-size: 105%;
+}
+.logo {
+	width: 40%;
+}
+
+/* Top Section */
+
+.top {
+	margin-top: 100px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	font-size: 80px;
+	display: flex;
+	align-items: center;
+}
+
+@keyframes getstartedanimation {
+	0%   {background-color: rgb(196, 196, 196);}
+	100% {background-color: rgb(100, 100, 100);}
+  }
+
+.getstarted {
+	text-decoration: none;
+	border: 2px solid black;
+	border-radius: 18px;
+	color: rgb(0, 0, 0);
+	padding: 5px 30px;
+	background-color: rgb(189, 189, 189);
+	animation-name: getstartedanimation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: both;
+    width: 40%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.getstarted:hover {
+	color: rgb(255, 255, 255);
+	background-color: black;
+	animation-name: getstartedanimation;
+	animation-play-state: paused;
+	border: 2px solid black;
+}
+
+.title-img {
+    width: 40%;
+}
+
+.titlegetstarted {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Middle Section */
+
+.middle{
+	border-top: 1px solid black;
+	width: 100%;
+}
+
+.middletop {
+	display: flex;
+	justify-content: space-between;
+	margin: 40px 0;
+}
+
+.middlebottom {
+	display: flex;
+	justify-content: space-between;
+	margin: 40px 0;
+}
+
+.middle-img {
+	width: 100%;
+}
+
+
+/* Bottom Section */
+
+address p {
+	font-family: sans-serif;
+}
+
+.bottom {
+	border-top: 1px solid black;
+	padding-top: 40px;
+
+}
+
+.phone, .email {
+	color: black;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+.email:hover {
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+.copyright {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+
+
+/* Services Page */
+
+/* Top Section */
+.services-header-img {
+	margin: 100px 0 30px 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.services-top {
+	border-bottom: 1px black solid;
+	padding-bottom: 25px;
+}
+
+.services-title {
+	font-size: 40px;
+}
+
+/* Middle Section */
+.services-middle {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	margin: 30px 0;
+	border-bottom: 1px solid black;
+	padding-bottom: 30px
+}
+
+.digital-design, .ux-ui, .digital-marketing, .web-dev, .ios-dev, .android-dev {
+	width: 48%;
+	height: 40%;
+	border: 1px solid black;
+	padding: 20px;
+	background-color: rgb(210, 221, 240);
+	margin: 20px 0;
+}
+
+@keyframes learn-more-hover {
+	0% {
+		background-color: gray;
+		color: white;
+	}
+	100% {
+		background-color: white);
+		color: black;
+	}
+}
+
+.learn-more {
+	margin-top: 20px;
+	cursor: pointer;
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 5px 30px;
+	border-radius: 20px;
+}
+
+.learn-more:hover {
+	background-color: white;
+	animation-name: learn-more-hover;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+/* Bottom Section */
+.services-bottom {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+.services-bottom-left {
+	width: 48%;
+	display: flex;
+	flex-direction: column;
+}
+
+.services-bottom-right {
+	width: 48%;
+	height: 50%;
+	margin-top: 60px;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+}
+
+li {
+	margin: 15px 0;
+}
+
+/* Contact Page */
+.contact-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 30px;
+
+}
+
+.contact-title {
+	font-size: 50px;
+}
+.contact-phone, .contact-email {
+	color: black;
+	text-decoration: none;
+	margin: 5px 0;
+}
+
+.contact-email:hover {
+	text-decoration: underline;
+	font-size: 40px;
+}
+
+.contact-bottom-image {
+	margin: 30px 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.contact-contact p {
+	text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .logo {
+        order: -1;
+        width: 100%;
+        padding: 10px 120px;
+    }
+    nav {
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        padding: 0 0;
+        flex-wrap: wrap;
+        background-color: white;
+    }
+    body {
+        margin: 0 3%;
+    }
+    .title-img {
+        display: none;
+    }
+    .getstarted {
+        width: 60%;
+    }
+    .top {
+        justify-content: center;
+        margin: 60px 0;
+    }
+    button {
+        text-align: center;
+    }
+    /* Services */
+    .services-header-img {
+        margin: 30px 0;
+    }
+    .digital-design, .ux-ui, .digital-marketing, .web-dev, .ios-dev, .android-dev {
+        width: 100%;
+    }
+    .services-bottom-right {
+        display: none;
+    }
+    .services-bottom-left {
+        width: 100%;
+    }
+    
+}
+
+/* Mobile */
+/* Home */
+@media (max-width: 500px) {
+    body {
+        margin: 0 3%;
+    }
+    h3 {
+        margin: 20px 0;
+    }
+    nav {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        margin-top: 0;
+        padding: 0 0;
+    }
+    nav a {
+        border-bottom: 1px solid black;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .top {
+        margin: 10px 0;
+    }
+    .titlegetstarted {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 30px 0;
+    }
+    .getstarted {
+        width: 50%;
+    }
+    .middletop, .middlebottom {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo {
+        order: -1;
+        width: 100%;
+        padding: 5px 80px;
+    }
+/* Services */
+    .services-header-img {
+        margin: 30px 0;
+    }
+}
 
 
